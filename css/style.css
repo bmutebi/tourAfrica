@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1em "Lucida Grande", sans-serif;
+  line-height: 1.7;
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  padding: 1%;
+}
+
+.page-head a,
+.logo {
+  padding: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.page-head a:hover,
+.page-head a:active {
+  border-bottom: 1px solid white;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo::before {
+  content: "🌍";
+  padding-right: 10px;
+}
+
+/* end of head section */
+
+.page-banner {
+  /*background: url(../img/video.mp4) no-repeat;*/
+  background: url(../img/lagoon.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 93vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-banner__content {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: x-large;
+  animation-name: banner;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+@keyframes banner {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.banner-main {
+  margin-bottom: 20px;
+}
+
+.banner-btn,
+.book,
+button {
+  background: white;
+  color: black;
+  letter-spacing: 0;
+  text-transform: initial;
+  padding: 10px 30px 15px 30px;
+  text-decoration: none;
+  outline: none;
+  border-radius: 50px;
+}
+
+/* end of banner section */
+
+.heading {
+  text-align: center;
+  margin: 4% 0;
+  color: #7ed56f;
+  text-transform: uppercase;
+  padding: 0 3%;
+}
+
+.popular-tours {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 8%;
+}
+
+.tour-item {
+  width: 32%;
+  box-shadow: 10px 10px 30px lightgrey;
+}
+
+.tour-item-text {
+  padding: 10px 30px 30px;
+  background: linear-gradient(to left top, #7ed56f, #28b485);
+  margin-top: -8px;
+  color: white;
+  text-align: center;
+}
+
+.tour-item-text h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-top: 20px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.tour-item img {
+  width: 100%;
+}
+
+.price,
+.book {
+  display: block;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.book,
+button {
+  padding: 8px 15px;
+  margin-bottom: 10px;
+}
+
+/* end of tours section */
+
+.about-image {
+  width: 40%;
+  float: left;
+  padding-right: 3%;
+}
+
+.about-image img {
+  width: 100%;
+}
+.about-section {
+  padding-top: 5px;
+  background-color: whitesmoke;
+  color: black;
+}
+.page-about {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-text {
+  padding-bottom: 10%;
+  column-count: 2;
+  column-width: 30%;
+}
+
+.learn {
+  color: #7ed56f;
+}
+
+/* end of about section */
+
+.contact-section {
+  width: 100%;
+  background: url(../img/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.65;
+  padding: 5% 0;
+}
+.contact-us {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  width: 60%;
+}
+
+.contact-details {
+  width: 40%;
+}
+
+input,
+textarea,
+button {
+  display: block;
+  padding: 10px;
+  margin-bottom: 7px;
+  width: 90%;
+  font-size: 15px;
+}
+
+button {
+  width: auto;
+  border-radius: 0;
+}
+
+.contact-heading {
+  margin-bottom: 10px;
+}
+
+.phone {
+  padding: 5px 15px 10px 2px;
+}
+
+.phone::before,
+.mail::before,
+.mphone::before,
+.location::before {
+  content: "☎️";
+  padding-right: 10px;
+}
+
+.mail::before {
+  content: "📧";
+}
+
+.mphone::before {
+  content: "📱";
+}
+
+.location::before {
+  content: "🇺🇬";
+}
+/* end of contact section  */
+
+footer {
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  padding: 1%;
+  color: white;
+  text-align: center;
+}
+
+/* media queries */
+@media screen and (max-width: 950px) {
+  .tour-item {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .about-text {
+    padding-bottom: 10%;
+    column-count: 1;
+    column-width: 100%;
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-details {
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: x-large;
+  }
+  /* 
+    .banner-main {
+        color: #7ed56f;
+    } */
+
+  .page-head a,
+  .logo {
+    padding: 0 3px;
+    font-weight: normal;
+  }
+
+  .logo::before {
+    content: "";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo::before {
+    content: "";
+  }
+}
